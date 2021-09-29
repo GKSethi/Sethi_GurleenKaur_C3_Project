@@ -26,24 +26,5 @@ public class ItemTest {
 	        restaurant.addToMenu("Cheese Toast", 220);
 	    }
 	    
-	    //>>>>>>>>>>>>>>>>>>>>>>>>>>>ORDER VALUE<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-	    @Test
-	    public void order_value_should_get_cumulative_total_when_collection_of_items_selected(){
-	    	add_restaurant_for_testing();
-	    	customMenu.add("Sweet corn soup");
-	        assertEquals(119,restaurant.getOrderValue(customMenu));
-	    }
-//	    @Test
-//	    public void order_value_should_get_incorrect_total_when_collection_of_items_selected(){
-//	    	add_restaurant_for_testing();
-//	    	menu = restaurant.getMenu();
-//	        assertNotEquals(360,restaurant.getOrderValue(menu));
-//	    }
-	    @Test
-	    public void order_value_should_get_cumulative_total_when_no_items_selected(){
-	    	add_restaurant_for_testing();
-	        assertEquals(0,restaurant.getOrderValue(customMenu));
-	    }
-	    //<<<<<<<<<<<<<<<<<<<<<<<<<ORDER VALUE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
+	   
 }

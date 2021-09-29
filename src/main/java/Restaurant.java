@@ -77,10 +77,12 @@ public class Restaurant {
         return name;
     }
     
-    public int getOrderValue(List<Item> item){
+    public int getOrderValue(List<String> itemNames){
         int totalValue = 0;
-        for (Item myItem : item) {
-            totalValue += myItem.getPrice();
+        for (Item item : menu) {
+        	for (String name: itemNames)
+        	if(item.getName().equals(name))
+                totalValue=totalValue+ item.getPrice();
         }
         return totalValue;
     }
